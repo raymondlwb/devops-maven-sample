@@ -7,12 +7,17 @@ resources:
 #namespace
 namespace: kubesphere-sample-dev
 
+images:
+- name: feeeng/devops-java-sample:latest
+  newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
+  newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 
-# patch
-patches:
-- target:
-    version: v1
-    kind: Deployment
-    group: apps
-    name: ks-sample
-  path: update_patch.yaml
+
+# # patch
+# patches:
+# - path: update_patch.yaml
+#   target:
+#     group: apps
+#     kind: Deployment
+#     name: ks-sample
+#     version: v1

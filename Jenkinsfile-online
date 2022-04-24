@@ -71,8 +71,7 @@ pipeline {
                     credentialsId: env.KUBECONFIG_CREDENTIAL_ID,
                     variable: 'KUBECONFIG')
                     ]) {
-                    sh 'envsubst < deploy/dev/kustomization.yaml| kubectl kustomize  deploy/dev '
-                    sh 'envsubst < deploy/dev-all-in-one/devops-sample.yaml | kubectl apply -f -'
+                    sh 'kubectl kustomize  deploy/dev | envsubst| kubectl apply -f -'
                 }
             }
           }

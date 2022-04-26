@@ -15,9 +15,8 @@ images:
 
 # # patch
 # patches:
-# - path: update_patch.yaml
+# - path: patch-svc.yaml
 #   target:
-#     group: apps
-#     kind: Deployment
+#     kind: Service
 #     name: ks-sample
 #     version: v1

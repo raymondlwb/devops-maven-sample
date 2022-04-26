@@ -113,7 +113,7 @@ pipeline {
                     variable: 'KUBECONFIG')
                     ]) {
                     // patch service
-                    // sh 'envsubst < deploy/dev/patch-svc.yaml.tmp > deploy/dev/patch.svc.yaml'
+                    // sh 'envsubst < deploy/prod/patch-svc.yaml.tmp > deploy/prod/patch.svc.yaml'
                     sh 'kubectl kustomize  deploy/prod | envsubst| kubectl apply -f -'
                 }
             }

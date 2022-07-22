@@ -71,7 +71,7 @@ pipeline {
 
 
 
-        stage('update image mainfast') {
+        stage('update mainfast') {
           when{
             branch 'master'
           }

@@ -3,20 +3,6 @@ kind: Kustomization
 
 resources:
 - ../base
-
-#namespace
-# namespace: kubesphere-sample-dev
-
-# images:
-# - name: feeeng/devops-java-sample:latest
-  # newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
-  # newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
-
-
-# # patch
-# patches:
-# - path: patch-svc.yaml
-#   target:
-#     kind: Service
-#     name: ks-sample
-#     version: v1
+images:
+- name: docker.io/feeeng/devops-java-sample
+  newTag: SNAPSHOT-master-53

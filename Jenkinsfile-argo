@@ -83,7 +83,6 @@ pipeline {
                       def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                       def encodedUsername = URLEncoder.encode("$GIT_USERNAME",'UTF-8')
                       sh """
-                        git checkout origin/master
                         git config remote.origin.url https://$encodedUsername:$encodedPassword@github.com/$GITHUB_ACCOUNT/devops-java-sample.git
                         git config --global user.email "kubesphere-cd@yunify.com" 
                         git config --global user.name "kubesphere-cd" 
@@ -91,10 +90,9 @@ pipeline {
                         cd deploy/dev/ 
                         kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
                         
-                        git pull origin HEAD:master
                         
                         git add . 
-                        git commit -m "images update for dev"
+                        git commit -ma "images update for dev"
         
                         git push  origin HEAD:master
 

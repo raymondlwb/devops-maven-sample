@@ -77,7 +77,7 @@ pipeline {
 
                       cd deploy/dev && kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 
-                      git commit -am "images update for dev"
+                      git add . -m "images update for dev"
                       git push origin master 
 
                       """

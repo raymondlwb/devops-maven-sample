@@ -76,10 +76,10 @@ pipeline {
                       git config --global user.name "kubesphere" 
 
                       cd deploy/dev && kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
-
-                      git add .
-                      git commit -m "images update for dev"
-                      git push 
+                      
+                      
+                      git commit -ma "images update for dev"
+                      git push  origin master
 
                       """
                   }

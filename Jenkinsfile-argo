@@ -82,7 +82,7 @@ pipeline {
                   withCredentials([usernamePassword(credentialsId: "$GITHUB_CREDENTIAL_ID", passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                       def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                       sh """
-                        
+                        git remote set-url origin http://${GITHUB_CREDENTIAL_ID}:${GIT_PASSWORD}@github.com/$GITHUB_ACCOUNT/devops-java-sample.git
                         git config --global user.email "kubesphere-cd@yunify.com" 
                         git config --global user.name "kubesphere-cd" 
 

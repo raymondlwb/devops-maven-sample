@@ -73,7 +73,7 @@ pipeline {
                       git config --global user.email "kubesphere@yunify.com" 
                       git config --global user.name "kubesphere" 
 
-                      cd deploy/dev && ls -l && kubectl kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+                      cd deploy/dev && ls -l && kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 
                       git commit -m " images update for dev "
                       git push http://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GITHUB_ACCOUNT/devops-maven-sample.git

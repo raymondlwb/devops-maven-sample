@@ -5,12 +5,12 @@ resources:
 - ../base
 
 #namespace
-namespace: kubesphere-sample-dev
+# namespace: kubesphere-sample-dev
 
-images:
-- name: feeeng/devops-java-sample:latest
-  newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
-  newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+# images:
+# - name: feeeng/devops-java-sample:latest
+  # newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
+  # newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 
 
 # # patch

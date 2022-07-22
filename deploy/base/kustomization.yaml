@@ -6,4 +6,4 @@ resources:
 - service.yaml
 
 # namespace
-namespace: kubesphere-dev
+# namespace: kubesphere-dev

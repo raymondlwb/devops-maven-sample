@@ -28,7 +28,7 @@ pipeline {
                     extensions: [],
                     submoduleCfg: [],
                     userRemoteConfigs: [[
-                      credentialsId: '$GITHUB_CREDENTIAL_ID', 
+                      credentialsId: "$GITHUB_CREDENTIAL_ID", 
                       url: "https://github.com/Feeeenng/devops-maven-sample.git"
                         ]]
                     ])
@@ -88,14 +88,12 @@ pipeline {
 
                         cd deploy/dev/ 
                         kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
-                        cat kustomization.yaml
-                        echo $GIT_COMMIT
                         
                         git add . 
                         git commit -m "images update for dev"
-                        echo $GIT_COMMIT
                         
-                        git status
+                        git pull origin master
+        
                         git push  origin HEAD:master
 
                         """

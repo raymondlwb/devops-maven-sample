@@ -81,7 +81,7 @@ pipeline {
                         
                         git add . 
                         git commit -m "images update for dev"
-                        git push  https://$GIT_USERNAME:${encodedPassword}@github.com/$GITHUB_ACCOUNT/devops-java-sample.git
+                        git push  origin master
 
                         """
                     }

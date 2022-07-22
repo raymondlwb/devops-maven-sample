@@ -92,7 +92,7 @@ pipeline {
                         
                         
                         git add . 
-                        git commit -ma "images update for dev"
+                        git commit -m "images update for dev"
         
                         git push  origin HEAD:master
 

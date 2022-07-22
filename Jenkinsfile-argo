@@ -22,7 +22,17 @@ pipeline {
     stages {
         stage ('checkout scm') {
             steps {
-                checkout(scm)
+                  checkout([
+                    $class: 'GitSCM',
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[
+                      credentialsId: '83d2e934-75c9-48fe-9703-b48e2feff4d8', 
+                      url: "https://github.com/Feeeenng/devops-maven-sample.git"
+                        ]]
+                    ])
+             
             }
         }
 

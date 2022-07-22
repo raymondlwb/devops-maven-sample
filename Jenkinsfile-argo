@@ -72,7 +72,6 @@ pipeline {
                     sh """
                     
                       git remote set-url origin http://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GITHUB_ACCOUNT/devops-maven-sample.git
-                      git fetch --all
                       git config --global user.email "kubesphere@yunify.com" 
                       git config --global user.name "kubesphere" 
 

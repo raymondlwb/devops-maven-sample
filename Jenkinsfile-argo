@@ -74,8 +74,13 @@ pipeline {
                       git remote set-url origin http://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GITHUB_ACCOUNT/devops-maven-sample.git
                       git config --global user.email "kubesphere@yunify.com" 
                       git config --global user.name "kubesphere" 
+                      git clone http://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GITHUB_ACCOUNT/devops-maven-sample.git /opt/deploy
+                      cd /opt/deploy
+                      git pull
+                      ls /opt/deploy
+                      
 
-                      cd deploy/dev && kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+                      cd deploy/dev/ && kustomize edit set image $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
                       
                       git add .
                       git commit -m "images update for dev"

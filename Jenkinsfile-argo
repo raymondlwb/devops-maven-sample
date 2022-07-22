@@ -28,7 +28,7 @@ pipeline {
                     extensions: [],
                     submoduleCfg: [],
                     userRemoteConfigs: [[
-                      credentialsId: '83d2e934-75c9-48fe-9703-b48e2feff4d8', 
+                      credentialsId: '$GITHUB_CREDENTIAL_ID', 
                       url: "https://github.com/Feeeenng/devops-maven-sample.git"
                         ]]
                     ])
@@ -96,7 +96,7 @@ pipeline {
                         echo $GIT_COMMIT
                         
                         git status
-                        git push  origin master
+                        git push  origin HEAD:master
 
                         """
                     }

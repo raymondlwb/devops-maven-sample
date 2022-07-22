@@ -5,4 +5,4 @@ resources:
 - ../base
 images:
 - name: docker.io/feeeng/devops-java-sample
-  newTag: SNAPSHOT-master-53
+  newTag: SNAPSHOT-master-55

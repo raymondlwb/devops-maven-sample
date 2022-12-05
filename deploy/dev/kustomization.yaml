@@ -4,6 +4,8 @@ kind: Kustomization
 resources:
 - ../base
 images:
-- name: docker.io/feeeng/devops-java-sample:latest
-  newName: docker.io/feeeng/devops-java-sample
-  newTag: SNAPSHOT-master-66
+#- name: docker.io/feeeng/devops-java-sample:latest
+- name: docker.io/luomonkeyking/devops-java-sample:SNAPSHOT-master-5 
+  newName: docker.io/raymondlwb/devops-java-sample
+  newTag: SNAPSHOT-master-5
+docker pull luomonkeyking/devops-java-sample:SNAPSHOT-master-5

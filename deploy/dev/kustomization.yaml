@@ -11,5 +11,5 @@ images:
 #- name: docker.io/feeeng/devops-java-sample:latest
 - name: docker.io/raymondlwb/devops-maven-sample:SNAPSHOT-master-5 
   newName: docker.io/raymondlwb/devops-maven-sample
-  newTag: SNAPSHOT-master-dev
+  newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 

@@ -1,4 +1,6 @@
-FROM java:8u92-jre-alpine
+#FROM java:8u92-jre-alpine
+
+FROM wangpy67/armopenjdk:8
 
 WORKDIR /home
 

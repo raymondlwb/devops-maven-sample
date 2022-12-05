@@ -8,7 +8,8 @@ resources:
 namespace: kubesphere-sample-prod
 
 images:
-- name: feeeng/devops-java-sample:latest
+#- name: feeeng/devops-java-sample:latest
+- name: docker.io/luomonkeyking/devops-java-sample:SNAPSHOT-master-5
   newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
   newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 

@@ -10,6 +10,6 @@ namespace: kubesphere-sample-dev
 images:
 #- name: docker.io/feeeng/devops-java-sample:latest
 - name: docker.io/raymondlwb/devops-maven-sample:SNAPSHOT-master-5 
-  newName: docker.io/raymondlwb/devops-maven-sample
+  newName: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME
   newTag: SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
 

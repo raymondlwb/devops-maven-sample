@@ -9,7 +9,7 @@ namespace: kubesphere-sample-dev
 
 images:
 #- name: docker.io/feeeng/devops-java-sample:latest
-- name: docker.io/raymondlwb/devops-java-sample:SNAPSHOT-master-5 
-  newName: docker.io/raymondlwb/devops-java-sample
+- name: docker.io/raymondlwb/devops-maven-sample:SNAPSHOT-master-5 
+  newName: docker.io/raymondlwb/devops-maven-sample
   newTag: SNAPSHOT-master-dev
 

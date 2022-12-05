@@ -8,4 +8,4 @@ images:
 - name: docker.io/luomonkeyking/devops-java-sample:SNAPSHOT-master-5 
   newName: docker.io/raymondlwb/devops-java-sample
   newTag: SNAPSHOT-master-5
-docker pull luomonkeyking/devops-java-sample:SNAPSHOT-master-5
+

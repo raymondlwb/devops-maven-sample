@@ -5,6 +5,8 @@ metadata:
   labels:
     app: ks-sample
   name: ks-sample
+  annotations:
+    kubesphere.io/creator: admin
 spec:
   replicas: 1
   selector:

@@ -5,6 +5,8 @@ metadata:
   labels:
     app: kubesphere
   name: ks-sample
+  annotations:
+    kubesphere.io/creator: admin  
 spec:
   ports:
     - name: http

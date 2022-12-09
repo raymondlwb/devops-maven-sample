@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: graphical-dev
+  namespace: kubesphere-sample-dev
   labels:
     app: kubesphere
-  name: ks-sample
+  name: ks-sample-g
   annotations:
     kubesphere.io/creator: admin  
 spec:

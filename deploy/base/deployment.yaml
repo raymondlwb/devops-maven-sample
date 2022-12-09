@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: graphical-dev
+  namespace: kubesphere-sample-dev
   labels:
-    app: ks-sample
-  name: ks-sample
+    app: ks-sample-g
+  name: ks-sample-g
   annotations:
     kubesphere.io/creator: admin
 spec:
@@ -32,7 +32,7 @@ spec:
             failureThreshold: 30
             periodSeconds: 5
           imagePullPolicy: Always
-          name: ks-sample
+          name: ks-sample-g
           ports:
             - containerPort: 8080
               protocol: TCP

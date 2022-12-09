@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: kubesphere-sample-dev
   labels:
     app: ks-sample-g
   name: ks-sample-g
@@ -44,7 +43,4 @@ spec:
               cpu: 100m
               memory: 100Mi
       dnsPolicy: ClusterFirst
-      serviceAccountName: default
-      serviceAccount: default
-      securityContext: {}
       restartPolicy: Always
